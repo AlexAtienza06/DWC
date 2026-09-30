@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 16 - Zonas de la pantalla</title>
+    <style type="text/css">
+        body {
+            font-family: arial, helvetica;
+            margin: 0;
+            padding: 0;
+        }
+
+        #info {
+            width: 200px;
+            border: thin solid silver;
+            padding: .5em;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #fcfcfc;
+        }
+
+        #info h1 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+    </style>
+    <script type="text/javascript">
+        function examinaPantalla(elEvento) {
+            //Coordenadas X e Y.
+            let coordenadaX = elEvento.clientX;
+            let coordenadaY = elEvento.clientY;
+
+            // Obtenemos el ancho y el alto de la ventana del navegador. 
+            let anchoVentana = window.innerWidth;
+            let altoVentana = window.innerHeight;
+
+            // Calculamos la mitad del ancho de la ventana. 
+            let mitadAncho = anchoVentana / 2;
+
+            // Calculamos la mitad del alto de la ventana. 
+            let mitadAlto = altoVentana / 2;
+
+            // Comprobamos si el clic está en la parte izquierda. 
+            if (coordenadaX < mitadAncho) {
+                // Comprobamos si el clic está en la parte superior. 
+                if (coordenadaY < mitadAlto) {
+                    alert("Has pulsado en la zona izquierda arriba");
+                }
+                // Si no está arriba, está abajo. 
+                else {
+                    alert("Has pulsado en la zona izquierda abajo");
+                }
+            }
+
+            // Si no está a la izquierda, está a la derecha.
+            else {
+                // Comprobamos si el clic está en la parte superior.
+                if (coordenadaY < mitadAlto) {
+                    alert("Has pulsado en la zona derecha arriba");
+                }
+                // Si no está arriba, está abajo. 
+                else {
+                    alert("Has pulsado en la zona derecha abajo");
+                }
+            }
+        }
+        window.onload = function () {
+            document.onclick = examinaPantalla;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="info">
+        <h1>Zonas de pantalla</h1>
+        <p>Haz clic en cualquier parte de la ventana para averiguar en qué cuadrante estás pulsando.</p>
+    </div>
+</body>
+
+</html>
