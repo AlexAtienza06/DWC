@@ -23,30 +23,46 @@
         }
     </style>
     <script type="text/javascript">
-        // TU CÓDIGO JAVASCRIPT DEBE IR AQUÍ
-        // Pista: Debes asignar las funciones controladoras a document o window
-        // ejemplo: document.onmousemove = tuFuncion;
+        /**
+         * Añadimos un evento en la ventana que detecta cuando el ratón se mueve. 
+         */
         window.addEventListener('mousemove', (evento) => {
+            //Coordenadas X e Y.
             let coordenadaX = evento.screenX;
             let coordenadaY = evento.screenY;
 
+            //Mostramos las coordenadas en el cuadro de texto.
             let parrafo = document.getElementById('p');
             parrafo.textContent = `Coordenada X: ${coordenadaX} \n Coordenada Y: ${coordenadaY}`;
+
+            //Y modificamos el color del fondo para cuando mueva el ratón se ponga de color blanco.
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#FFFFFF';
         });
 
-
+        /**
+         * Añadimos un evento en la ventana que detecta cuando se pulsa una tecla. 
+         */
         window.addEventListener('keypress', (evento) => {
+            //Variable que lee la tecla pulsada.
             let tecla = String.fromCharCode(evento.charCode);
+
+            //Mostramos la tecla pulsada en el cuadro de texto.
             let parrafo = document.getElementById('p');
             parrafo.textContent = `Tecla pulsada: ${tecla}`;
 
-
+            //Si se pulsa una tecla se modifica el color del fondo del cuadro de texto a azul.
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#CCE6FF';
         });
-
-
-
-
-
+        /**
+        * Añadimos un evento en la ventana que detecta cuando se clickea con el ratón. 
+        */
+        window.addEventListener('click', (evento) => {
+            //Si se hace click se modifica el color del fondo del cuadro de texto a amarillo.
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#FFFFCC';
+        });
     </script>
 </head>
 
