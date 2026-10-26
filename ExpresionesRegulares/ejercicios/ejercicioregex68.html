@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="es">
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937
 <head>
   <meta charset="utf-8">
   <title>Ejercicio regex 68</title>
 </head>
+<<<<<<< HEAD
 <body>
   <h1>Escapar una cadena para usarla como patrón literal</h1>
   <p>Completa una regex que escape todos los metacaracteres habituales. Después, construye un RegExp con el texto escapado y comprueba que encuentra la cadena original literalmente.</p>
@@ -15,3 +20,21 @@
   </script>
 </body>
 </html>
+=======
+
+<body>
+  <h1>Escapar una cadena para usarla como patrón literal</h1>
+  <p>Completa una regex que escape todos los metacaracteres habituales. Después, construye un RegExp con el texto
+    escapado y comprueba que encuentra la cadena original literalmente.</p>
+  <script>
+    const literal = "a.b+c?";
+    const escapada = literal.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(escapada);
+
+    console.log(escapada);
+    console.log(regex.test(literal));
+  </script>
+</body>
+
+</html>
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937

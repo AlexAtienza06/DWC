@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="es">
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937
 <head>
   <meta charset="utf-8">
   <title>Ejercicio regex 78</title>
 </head>
+<<<<<<< HEAD
 <body>
   <h1>Diseñar una búsqueda sin coincidencia excesiva</h1>
   <p>Con una cadena que contiene varios pares de corchetes, extrae cada contenido por separado. Evita que una coincidencia abarque desde el primer [ hasta el último ].</p>
@@ -13,3 +18,17 @@
   </script>
 </body>
 </html>
+=======
+
+<body>
+  <h1>Diseñar una búsqueda sin coincidencia excesiva</h1>
+  <p>Con una cadena que contiene varios pares de corchetes, extrae cada contenido por separado. Evita que una
+    coincidencia abarque desde el primer [ hasta el último ].</p>
+  <script>
+    const texto = "[uno] y [dos]";
+    console.log([...texto.matchAll(/\[(.*?)\]/g)].map(m => m[1]));
+  </script>
+</body>
+
+</html>
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937

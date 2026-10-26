@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="es">
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937
 <head>
   <meta charset="utf-8">
   <title>Ejercicio regex 71</title>
 </head>
+<<<<<<< HEAD
 <body>
   <h1>Analizar registros por línea</h1>
   <p>De cada línea con formato NIVEL: mensaje, extrae el nivel y el mensaje en grupos. Hazlo para todas las líneas y muestra los resultados.</p>
@@ -13,3 +18,20 @@
   </script>
 </body>
 </html>
+=======
+
+<body>
+  <h1>Analizar registros por línea</h1>
+  <p>De cada línea con formato NIVEL: mensaje, extrae el nivel y el mensaje en grupos. Hazlo para todas las líneas y
+    muestra los resultados.</p>
+  <script>
+    const log = "INFO: iniciado\nERROR: fallo\nWARN: revisar";
+    console.log(
+      [...log.matchAll(/^(?<nivel>\w+):\s*(?<mensaje>.+)$/gm)]
+        .map(m => m.groups)
+    );
+  </script>
+</body>
+
+</html>
+>>>>>>> fbeca5e3f6b11e35830a824786ad43861623d937
